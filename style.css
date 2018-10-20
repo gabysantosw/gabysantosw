@@ -24,7 +24,7 @@ h1 {
   margin: 1em 0;
 }
 
-button {
+.button {
   padding: 1em 3em;
   font-family: 'Helvetica';
   font-size: 1em;
@@ -37,7 +37,7 @@ button {
   transition: 0.8s;
 }
 
-button:hover {
+.button:hover {
   color: #fff;
   background-color: #94a4c4;
   border: 0.5em solid #94a4c4;
