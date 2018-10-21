@@ -10,8 +10,8 @@ header{
   background-image: url(https://images.pexels.com/photos/1478685/pexels-photo-1478685.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);
   background-position: center top;
   background-size: cover;
-  display: flex;
-  justify-content: center;
+  display:  flex;
+  justify-content:  center;
   align-items: center;
   flex-direction: column;
 }
@@ -25,7 +25,7 @@ h1 {
   margin: 1em 1em;
 }
 
-input, form {
+form, input {
   appearance: none;
 }
 
