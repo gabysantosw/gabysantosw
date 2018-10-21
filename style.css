@@ -24,8 +24,12 @@ h1 {
   margin: 1em 0;
 }
 
-.button {
+input {
+  -webkit-appearance: none;
   appearance: none;
+}
+
+.button {
   padding: 1em 3em;
   font-family: 'Helvetica';
   font-size: 1em;
