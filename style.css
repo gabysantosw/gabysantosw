@@ -25,10 +25,6 @@ h1 {
   margin: 1em 2em;
 }
 
-form, input {
-  appearance: none;
-}
-
 input, form {
   -webkit-appearance: none;
   appearance: none;
@@ -41,7 +37,7 @@ input, form {
   font-weight: bold;
   border-radius: 2em;
   color: #fff;
-  background-color: black;
+  background-color:  #D8584E;
   border: 0.5em solid #D8584E;
   box-shadow: .1em .1em 1em #000;
   transition: 0.8s;
