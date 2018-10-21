@@ -24,8 +24,7 @@ h1 {
   margin: 1em 0;
 }
 
-input {
-  -webkit-appearance: none;
+input, form {
   appearance: none;
 }
 
