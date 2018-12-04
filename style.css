@@ -30,6 +30,7 @@
   height: 100vh;
   z-index: 1;
   font-size: 0;
+  text-align: center;
   background-color: black;
   overflow: hidden;
   white-space: nowrap;
