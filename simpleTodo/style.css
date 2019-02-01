@@ -1,0 +1,103 @@
+html, body {
+	margin: 1em;
+	background: #f4f9f4;
+	color: #5c8d89;
+	font-family: monospace;
+}
+
+div {
+	padding: .5em 0;
+	border-radius: 10em;
+	background: #a7d7c5;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+input {
+	padding: 1em;
+	border: none;
+	background: transparent;
+	color: #404342;
+}
+
+input + button {
+	margin: 0 1em;
+	padding: 1em;
+	border: none;
+	border-radius: 10em;
+	background: #404342;
+	color: #f4f9f4;
+	cursor: pointer;
+}
+
+input + button:hover {
+	background: #f4f9f4;
+	color: #404342;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+li {
+	width: 90%;
+	padding: 1em;
+	margin: 0 1em;
+	list-style-type: none;
+	box-shadow: inset 0 -3px 0 #a7d7c5;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	cursor: pointer;
+}
+
+li:hover {
+	background: #5c8d8922;
+	color: #5c8d89;;
+}
+
+
+li > button {
+	border: none;
+	padding: 1em;
+	border-radius: 10em;
+	background: #f7ebea;
+	color: #8d5c60;
+	cursor: pointer;
+}
+
+li > button:hover {
+	background: #8d5c60;
+	color: #f7ebea;
+}
+
+.done {
+	background: #5c8d89;
+	color: #f4f9f4;
+}
+
+.done:hover {
+	background: #5c8d89cc;
+	color: #f4f9f4;
+}
+
+/*
+  COLOR PALETTE
+
+  GREENS
+  #f4f9f4
+  #a7d7c5
+  #74b49b
+  #5c8d89
+  #404342
+
+  REDS
+  #8d5c60
+  #f7ebea
+
+*/
