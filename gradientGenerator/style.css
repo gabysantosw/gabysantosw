@@ -44,3 +44,15 @@ button:hover {
 	background: #000000ff;
 	transform: scale(1.1);
 }
+
+@media (max-width=500px) {
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+  }
+  h3 {
+    font-size: 1.1em;
+  }
+}
