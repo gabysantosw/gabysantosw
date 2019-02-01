@@ -46,8 +46,11 @@ button:hover {
 }
 
 @media (max-width: 500px) {
+  body {
+    width: 100vw;
+  }
   h1 {
-    font-size: 2em;
+    font-size: 1.8em;
   }
   h2 {
     font-size: 1.5em;
