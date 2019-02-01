@@ -47,7 +47,7 @@ button:hover {
 
 @media (max-width: 500px) {
   body {
-    width: 100vw;
+    width: 100%;
   }
   h1 {
     font-size: 1.8em;
