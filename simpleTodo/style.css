@@ -15,6 +15,7 @@ div {
 }
 
 input {
+	width: 90%;
 	padding: 1em;
 	border: none;
 	background: transparent;
@@ -84,6 +85,13 @@ li > button:hover {
 .done:hover {
 	background: #5c8d89cc;
 	color: #f4f9f4;
+}
+
+@media (max-width: 500px) {
+	html, body {
+	  margin: .5rem;
+		font-size: 16px;
+	}
 }
 
 /*
