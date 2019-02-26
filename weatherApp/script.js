@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
   // this will run on load
-  console.log('hi');
+  
   // dom elements
   let tempDegreeA = document.querySelector('.gaby > .degree');
   let tempDegreeC = document.querySelector('.laia > .degree');
@@ -13,7 +13,8 @@ window.addEventListener('load', () => {
   const longC = 2.075478;
 
   // proxy to use the api in localhost, should be added concatenated to apiA, apiC
-  // doesn't seem to be needed here
+  // doesn't seem to be needed in atom
+  // needed in github pages
   const proxy = 'https://cors-anywhere.herokuapp.com/';
 
   // https://api.darksky.net/forecast/e333cc7875d26ac16489f03999b19b35/lat,long
