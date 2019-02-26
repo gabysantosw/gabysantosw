@@ -1,9 +1,9 @@
 window.addEventListener('load', () => {
   // this will run on load
-
+  console.log('hi');
   // dom elements
-  let tempDegreeA = document.querySelector('.gaby > degree');
-  let tempDegreeC = document.querySelector('.laia > degree');
+  let tempDegreeA = document.querySelector('.gaby > .degree');
+  let tempDegreeC = document.querySelector('.laia > .degree');
 
   // 40.025620, -3.606671 Aranjuez
   const latA = 40.025620;
@@ -13,25 +13,35 @@ window.addEventListener('load', () => {
   const longC = 2.075478;
 
   // proxy to use the api in localhost, should be added concatenated to apiA, apiC
+  // doesn't seem to be needed here
   const proxy = 'https://cors-anywhere.herokuapp.com/';
 
   // https://api.darksky.net/forecast/e333cc7875d26ac16489f03999b19b35/lat,long
   const apiA = `https://api.darksky.net/forecast/e333cc7875d26ac16489f03999b19b35/${latA},${longA}`;
   const apiC = `https://api.darksky.net/forecast/e333cc7875d26ac16489f03999b19b35/${latC},${longC}`;
 
-
+  // [°C] = ([°F] - 32) × 5/9
   fetch(apiA).then(responseA => {
     return responseA.json();
   }).then(dataA => {
-    const { temperature } = data.currently;
-    tempDegreeA.textContent = temperature;
+    const { temperature, icon } = dataA.currently;
+    tempDegreeA.textContent = ((temperature-32)*(5/9)).toFixed(0)+'°C';
+    setIcons(icon, document.querySelector('#iconA'));
   });
 
   fetch(apiC).then(responseC => {
-    return responseA.json();
+    return responseC.json();
   }).then(dataC => {
-    const { temperature } = data.currently;
-    tempDegreeA.textContent = temperature;
+    const { temperature, icon } = dataC.currently;
+    tempDegreeC.textContent = ((temperature-32)*(5/9)).toFixed(0)+'°C';
+    setIcons(icon, document.querySelector('#iconC'));
   });
+
+  function setIcons(icon, iconID) {
+    const skycons = new Skycons({color: 'white'});
+    const currentIcon = icon.replace(/-/g, '_').toUpperCase();
+    skycons.play();
+    return skycons.set(iconID, Skycons[currentIcon]);
+  }
 
 });

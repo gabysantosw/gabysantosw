@@ -39,8 +39,9 @@ h3 {
   color: hsl(0, 0%, 72%);
   font-size: 4rem;
   font-family: sans-serif;
+	font-weight: lighter;
 }
 
-.icon {
-
+#iconA, #iconC {
+	margin-top: 1rem;
 }
