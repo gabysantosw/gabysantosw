@@ -17,8 +17,8 @@ window.addEventListener('load', () => {
   const proxy = 'https://cors-anywhere.herokuapp.com/';
 
   // https://api.darksky.net/forecast/e333cc7875d26ac16489f03999b19b35/lat,long
-  const apiA = `https://api.darksky.net/forecast/e333cc7875d26ac16489f03999b19b35/${latA},${longA}`;
-  const apiC = `https://api.darksky.net/forecast/e333cc7875d26ac16489f03999b19b35/${latC},${longC}`;
+  const apiA = `${proxy}https://api.darksky.net/forecast/e333cc7875d26ac16489f03999b19b35/${latA},${longA}`;
+  const apiC = `${proxy}https://api.darksky.net/forecast/e333cc7875d26ac16489f03999b19b35/${latC},${longC}`;
 
   // [°C] = ([°F] - 32) × 5/9
   fetch(apiA).then(responseA => {
