@@ -1,1 +1,46 @@
+@import url('https://fonts.googleapis.com/css?family=Gloria+Hallelujah');
 
+/* css reset */
+html, body, h1 {
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+body {
+	height: 100vh;
+	background: linear-gradient(45deg, hsl(210, 100%, 62%), hsl(229, 100%, 22%));
+	font-family: sans-serif;
+	display: flex;
+	justify-content: center;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.avatar > svg {
+  width: 10rem;
+  height: auto;
+  margin: 1rem;
+}
+
+h2 {
+	margin: -1rem;
+  color: hsl(229, 100%, 96%);
+  font-size: 2rem;
+  font-family: 'Gloria Hallelujah', sans-serif;
+}
+
+h3 {
+	margin: 1rem;
+  color: hsl(0, 0%, 72%);
+  font-size: 4rem;
+  font-family: sans-serif;
+}
+
+.icon {
+
+}
