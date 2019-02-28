@@ -23,6 +23,11 @@
     messagingSenderId: "313820785156"
   };
   firebase.initializeApp(config);
+
+  const testH1 = document.querySelector('#test');
+  let db = firebase.database().ref().child('text');
+  db.on('value', snap => testH1.innerText = snap.val());
+
 </script>
   <script type="text/javascript" src="script.js"></script>
 
