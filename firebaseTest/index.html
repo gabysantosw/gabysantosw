@@ -24,11 +24,12 @@
 
   const testH1 = document.querySelector('#test');
   let db = firebase.database().ref('text');
-  db.on('value', snap =>
-  //console.log(snap.val()));
-  //console.log(testH1);
-  console.log(db);
-  console.log(firebase.database().ref('test'));
+  db.on('value', snap => {
+    //console.log(snap.val()));
+    //console.log(testH1);
+    console.log(db);
+    console.log(firebase.database().ref('test'));
+  }
   );
 
 
