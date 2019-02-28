@@ -9,9 +9,11 @@
 </head>
 <body>
 
-  <h1 id="test">Hello</h1>
+  <h1 id="test"></h1>
 
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
 <script>
   // Initialize Firebase
   var config = {
@@ -26,7 +28,7 @@
 
   const testH1 = document.querySelector('#test');
   let db = firebase.database().ref().child('text');
-  db.on('value', snap => testH1.innerText = snap.val());
+  db.on('value', snap => console.log(snap.val()));
 
 </script>
   <script type="text/javascript" src="script.js"></script>
