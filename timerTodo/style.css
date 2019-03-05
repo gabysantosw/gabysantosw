@@ -1,0 +1,261 @@
+/* --- IMPORTS ------------------------------------------------------- */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Mono:400,700');
+@import url('https://fonts.googleapis.com/css?family=Kalam:400,700');
+@import url('https://fonts.googleapis.com/css?family=Handlee');
+
+/* --- CSS RESET ----------------------------------------------------- */
+
+html, body {
+	padding: 0;
+	margin: 0;
+	font-size: 16px;
+}
+
+/* ---  BASIC --------------------------------------------------------- */
+
+header {
+	background: hsl(0, 0%, 15%);
+/* 	box-shadow: 0 .5rem 1rem hsl(0, 0%, 15%); */
+	box-shadow: 0 .1rem 0 .1rem hsl(274, 100%, 54%);
+	z-index: 0;
+	display: flex;
+	justify-content: center;
+	/* relative allows the use of z-index
+	   needed for header shadow to show */
+	position: relative;
+	z-index: 1;
+}
+
+h1 {
+	margin: .5rem;
+	color: hsl(0, 0%, 65%);
+	font-size: 1.5rem;
+	font-family: "Roboto Mono";
+	-moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+h1 > span {
+	margin-left: .1rem;
+	color: hsl(0, 0%, 100%);
+	font-family: "Handlee";
+	letter-spacing: .2rem;
+}
+
+main {
+	min-height: 90vh;
+	background: hsl(0, 0%, 20%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+main > section:first-child {
+	width: 30rem;
+	max-width: 85vw;
+	height: 2rem;
+	margin: 1rem 0;
+	padding: .5rem 1rem;
+	border-radius: 1rem;
+	background: hsl(0, 0%, 65%);
+	display: flex;
+	align-items: center;
+}
+
+main > section > input {
+	width: 4rem;
+	max-width: 100%;
+	height: 2rem;
+	border: none;
+	background: none;
+	color: hsl(0, 0%, 5%);
+	font-size: 1rem;
+	font-family: "Handlee";
+	font-weight: 700;
+	letter-spacing: .1rem;
+/* the default is 1 for each element, but flex-grow: 1
+	is enough to activate the auto grow
+	makes the content to adapt and fill the width
+	of flex container */
+	flex-grow: 1;
+}
+
+main > section > p {
+	margin: 0 .3rem;
+	color: hsl(0, 0%, 40%);
+	font-family: "Roboto Mono";
+}
+
+main > section > button {
+	width: 2rem;
+	height: 2rem;
+	margin: 0 -.5rem 0 .3rem;
+	padding: 0;
+	border: none;
+	background: none;
+	cursor: pointer;
+}
+
+footer {
+	padding: .3rem 0 .6rem 0;
+	background: hsl(0, 0%, 15%);
+	color: hsl(0, 0%, 95%);
+	font-size: 1rem;
+	font-family: monospace;
+	display: flex;
+	justify-content: center;
+	-moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+footer > a:link, a:visited {
+	color: hsl(274, 100%, 54%);
+}
+
+footer > div > div {
+	width: 1rem;
+	margin: 0 .rem;
+	display: inline-block;
+	transform: rotatez(-45deg);
+}
+
+/* --- GENERATED -------------------------------------------------- */
+
+main > section:nth-child(2) > div {
+	width: 30rem;
+	max-width: 85vw;
+	height: 2rem;
+	padding: .5rem 1rem;
+	border-radius: 1rem;
+	background: hsl(0, 0%, 15%);
+	display: flex;
+	align-items: center;
+	box-shadow: inset -3rem 0 0 0rem hsl(0, 0%, 25%);;
+}
+
+main > section:nth-child(2) > div:not(:first-of-type) {
+	margin-top: .5rem;
+}
+
+main > section:nth-child(2) > div > p:first-child {
+	color: hsl(0, 0%, 95%);
+	font-size: 1rem;
+	font-family: "Handlee";
+	font-weight: 700;
+	letter-spacing: .1rem;
+	flex-grow: 1;
+}
+
+main > section:nth-child(2) > div > p:nth-child(2) {
+	margin: 0 .5rem;
+	color: hsl(0, 0%, 55%);
+	font-family: "Roboto Mono";
+}
+
+main > section:nth-child(2) > div > div {
+	width: 2rem;
+	height: 2.5rem;
+	padding: 0;
+	border: none;
+}
+
+main > section:nth-child(2) > div > div > p {
+	margin: 0;
+	margin-right: -.5rem;
+	color: hsl(0, 0%, 55%);
+	font-size: 1rem;
+	text-align: center;
+	font-family: 'Roboto Mono';
+	font-weight: 900;
+}
+
+main > section:nth-child(2) > div > div > p:nth-child(2) {
+	margin-top: -.4rem;
+	font-size: 1.4rem;
+}
+
+/* --- SVG --------------------------------------------------------- */
+
+svg > * {
+	fill: hsl(274, 100%, 54%);
+}
+
+svg > polygon {
+	fill: hsl(274, 100%, 54%);
+}
+
+/* --- HOVER EFFECTS --------------------------------------------- */
+
+main > section > button:hover > svg > polygon {
+	fill: hsl(274, 100%, 14%);
+}
+
+main > section:nth-child(2) > div {
+	transition: 500ms;
+}
+
+main > section:nth-child(2) > div:hover {
+	transform: scale(1.05);
+}
+
+a:hover {
+	background: hsl(274, 100%, 54%);
+	color: hsl(0, 0%, 95%);
+}
+
+/* --- STATUS ------------------------------------------------------ */
+
+.hidden {
+	display: none;
+}
+
+input.error::placeholder {
+	color: hsl(0, 100%, 54%);
+	font-weight: 900;
+	letter-spacing: .3rem;
+}
+
+.playing {
+	box-shadow: 0 0 .1rem .1rem hsl(274, 100%, 54%);
+}
+
+/* --- ANIMATIONS ------------------------------------------------ */
+
+@keyframes shake {
+
+  0 {
+    transform: translateX(0)
+  }
+
+  20% {
+    transform: translateX(-5px) rotatez(-1deg)
+  }
+
+  40% {
+    transform: translateX(5px) rotatez(1deg)
+  }
+
+  60% {
+    transform: translateX(-3px) rotatez(-1deg)
+  }
+
+  80% {
+    transform: translateX(3px) rotatez(1deg)
+  }
+
+  100% {
+    transform: translateX(0)
+  }
+}
+
+
+.shake-animation {
+  animation-duration: .5s;
+  animation-timing-function: ease-in-out;
+  animation-name: shake;
+}
