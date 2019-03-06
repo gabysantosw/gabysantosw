@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Firebase Test</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,28 +14,6 @@
 
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-database.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyDHV-hAVdDKEBjHaA3xVnmB5BRuCtHw-yc",
-    databaseURL: "https://simpletodo-testv1.firebaseio.com",
-  };
-  firebase.initializeApp(config);
-
-  const testH1 = document.querySelector('#test');
-  let db = firebase.database().ref('text');
-  db.on('value', snap => {
-    console.log(snap.val()));
-    testH1.textContent = snap.val();
-    //console.log(testH1);
-    // object console.log(db);
-    // object console.log(firebase.database().ref('test'));
-  }
-  );
-
-
-
-</script>
   <script type="text/javascript" src="script.js"></script>
 
 </body>
