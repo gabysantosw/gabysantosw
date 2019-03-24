@@ -1,8 +1,7 @@
-// --- FIREBASE --------------------------------------------------------
 // Initialize Firebase
 let config = {
-  apiKey: "AIzaSyDHV-hAVdDKEBjHaA3xVnmB5BRuCtHw-yc",
-  databaseURL: "https://simpletodo-testv1.firebaseio.com",
+  apiKey: 'AIzaSyDHV-hAVdDKEBjHaA3xVnmB5BRuCtHw-yc',
+  databaseURL: 'https://simpletodo-testv1.firebaseio.com',
 };
 firebase.initializeApp(config);
 
@@ -14,6 +13,4 @@ db.on('value', snapshot => {
 });
 
 // returns amount of items in db doneTasks
-db.once("value").then(snapshot => {
-  console.log(snapshot.numChildren());
-});
+db.once('value').then(snapshot => console.log(snapshot.numChildren()));
