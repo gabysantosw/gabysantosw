@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>FCC - Technical Documentation</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- V1.0 - 27/03/18 -->
+</head>
+<body>
+
+		<nav id="navbar" class="inner">
+			<header>
+				<h1>Web Accessibility Guidelines</h1>
+			</header>
+			<ul  class="nav-ul">
+				<li> <a class="nav-link" href="#semantics">Semantics</a> </li>
+				<li> <a class="nav-link" href="#structure">Structure</a> </li>
+				<li> <a class="nav-link" href="#landmarks">Landmarks</a> </li>
+				<li> <a class="nav-link" href="#color">Color</a> </li>
+				<li> <a class="nav-link" href="#multimedia">Multimedia</a> </li>
+<!-- 				<li> <a class="nav-link" href="#forms">Forms</a> </li> -->
+<!-- 				<li> <a class="nav-link" href="#testing">Testing</a> </li> -->
+				<li> <a class="nav-link" href="#resources">Resources</a> </li>
+			</ul>
+		</nav>
+
+		<main id="main-doc" class="inner">
+
+			<section id="semantics" class="main-section">
+				<header> <h2> Semantics </h2> </header>
+				<p class="main-p">HTML5 introduced plenty of new tags that give meaning to our website's content and solves the issue of 'div-mania'.</p>
+				<h3>Example:</h3>
+				<code>
+					<span class="code-highlight">&lt;nav&gt;</span> This is our nav <span class="code-highlight">&lt;/nav&gt;</span>
+					<br>
+          <span class="code-highlight">&lt;main&gt;</span> Our main content is here <span class="code-highlight">&lt;main&gt;</span>
+					<br>
+          <span class="code-highlight">&lt;footer&gt;</span> Nice footer tag <span class="code-highlight">&lt;/footer&gt;</span>
+				</code>
+				<p class="main-p"></p>
+				<h3>Common semantic tags:</h3>
+				<ul class="main-ul">
+					<li class="main-li">Main tag -> main content</li>
+					<li class="main-li">Nav tag -> for the website's navigation</li>
+					<li class="main-li">Header tag -> head content </li>
+					<li class="main-li">Footer tag -> footer content</li>
+					<li class="main-li">Aside tag -> mostly used for sidebars</li>
+					<li class="main-li">Section tag -> to separate our content</li>
+					<li class="main-li">Article tag -> for each article</li>
+					<li class="main-li">Audio tag -> contains audio</li>
+					<li class="main-li">Video tag -> contains video</li>
+					<li class="main-li">Output tag -> result of a calculation</li>
+				</ul>
+				<p class="main-p">And a lot more!</p>
+			</section>
+
+			<section id="structure" class="main-section">
+				<header> <h2> Structure </h2> </header>
+				<p class="main-p">The main principle of a semantic structure is that it should be logical: a DOCTYPE of html must be declared, the html tag should have a language attribute, semantic tags must be used, headings should follow a hierarchial order, etc.</p>
+				<h3>Example:</h3>
+				<code>
+					<span class="code-highlight">&lt;!DOCTYPE html&gt;</span>
+					<br>
+          &lt;html <span class="code-highlight">lang=&quot;en&quot;</span>&gt;&lt;/html&gt;
+				</code>
+
+			</section>
+
+			<section id="landmarks" class="main-section">
+				<header> <h2> Landmarks </h2> </header>
+				<p class="main-p">The ARIA (Accessible Rich Internet Application) landmarks provide specific attributes to help assistive technologies to navigate a website, it does so by assinging roles to the HTML5 semantic tags. The best practice is to use both: semantic tags and landmark roles.</p>
+				<h3>Example:</h3>
+				<code> &lt;header <span class="code-highlight">role=&quot;banner&quot;</span>&gt; &lt;/header&gt; </code>
+				<p class="main-p">The correlation between landmarks and the HTML5 semantic tags tend to be pretty straightforward, in some cases the role is the same as the tag.</p>
+				<h3>Semantic tags and corresponding landmarks:</h3>
+				<ul class="main-ul">
+					<li class="main-li">Main tag -> "main" role</li>
+					<li class="main-li">Nav tag -> "navigaton" role</li>
+					<li class="main-li">Header tag -> "banner" role</li>
+					<li class="main-li">Aside tag -> "complementary" role</li>
+					<li class="main-li">Section tag -> "region" role</li>
+					<li class="main-li">Article tag -> "article" role</li>
+					<li class="main-li">Form tag -> "form" role</li>
+					<li class="main-li">Footer tag -> "contentinfo" role</li>
+				</ul>
+				<p class="main-p">There's also the "search" role that should be used in the search bar of a website.</p>
+			</section>
+
+			<section id="color" class="main-section">
+				<header> <h2> Colors </h2> </header>
+				<p class="main-p">We need to ensure that the colors for our website have enough contrast to be easily readable, because that's the purpose of text. If a text is not readable, our information won't be communicated to the users.</p>
+				<h3>Color blindness:</h3>
+				<p class="main-p">Our website should also be accessible for the different types of color blindness that exists. Here is a list:</p>
+				<ul class="main-ul">
+					<li class="main-li">Protanomaly -> Red color weakness</li>
+					<li class="main-li">Protanopia -> Red color blindness</li>
+					<li class="main-li">Deuteranomaly -> Green color weakness</li>
+					<li class="main-li">Deuteranopia -> Green color blindness</li>
+					<li class="main-li">Tritanomaly -> Blue color weakness</li>
+					<li class="main-li">Tritanopia -> Blue color blindness</li>
+					<li class="main-li">Achromatopsia -> Monocromatic view</li>
+					<p class="main-p">TIP: Test for Achromatopsia to check all colorblindness types and don't use only colors to convey meaning to the content.</p>
+
+				</ul>
+				<p class="main-p"></p>
+			</section>
+
+			<section id="multimedia" class="main-section">
+				<header> <h2> Multimedia </h2> </header>
+				<p class="main-p">Providing text alternatives to convey the meaning of our multimedia content is fundamental for users that browse using a screen reader or with some level of deafness.</p>
+				<h3>Images</h3>
+				<p class="main-p">An alt attribute (alternative text) in our images should always be used .It should contain a small description of the image content or be left empty if the purpose purely decorative so screen readers skip it.</p>
+				<code>
+					&lt;img src=&quot;background.jpeg&quot; <span class="code-highlight">alt=&quot;&quot;</span>&gt;
+					<br>
+          &lt;img src=&quot;dogPlushW12.jpeg' <span class="code-highlight">alt=&quot;White dog plush of 12 centimeters&quot;</span>&gt;
+				</code>
+				<h3>Video</h3>
+				<p class="main-p">The first rule is to use a media player that's accessible and allows to be navigated using the keyboard, the second is to provide alternative text both for visual and hearing impaired users. Ideally, all of these should be provided: </p>
+				<ul class="main-ul">
+					<li class="main-li">Captions -> for users who can't hear the audio track, it should include the words spoken and contextual information and descriptions of what's happening.</li>
+					<li class="main-li">Descriptions -> for users who can't see the video, it should include narrative descriptions of the content showcased.</li>
+					<li class="main-li">Subtitles -> for users who don't understand the language used, should include translations of the visual and auditory content.</li>
+				</ul>
+				<p class="main-p">Text alternatives are written in .vtt format. Note that an informative default should be provided for users whose browser's is unable to play the video. </p>
+				<code>
+					&lt;video <span class="code-highlight">controls</span>&gt;
+					<br>
+          &lt;source src=&quot;sample.mp4&quot; type=&quot;video/mp4&quot;&gt;
+					<br>
+          &lt;source src=&quot;sample.ogv&quot; type=&quot;video/ogv&quot;&gt;
+					<br>
+          <span class="code-highlight">&lt;track kind=&quot;captions&quot; src=&quot;captions.vtt&quot; srclang=&quot;en&quot;&gt;</span>
+					<br>
+          <span class="code-highlight">&lt;track kind=&quot;descriptions&quot; src=&quot;descriptions.vtt&quot; srclang=&quot;en&quot;&gt;</span>
+					<br>
+          <span class="code-highlight">&lt;track kind=&quot;subtitles&quot; src=&quot;subtitles_en.vtt&quot; srclang=&quot;en&quot;&gt;</span>
+					<br>
+          <span class="code-highlight">&lt;track kind=&quot;subtitles&quot; src=&quot;subtitles_es.vtt&quot; srclang=&quot;es&quot;&gt;</span>
+					<br>
+          &lt;p&gt; Your browser doesn't support HTML5 video. &lt;/p&gt;
+					<br>
+          &lt;/video&gt;
+				</code>
+				<h3> Audio </h3>
+				<p class="main-p">Fairly similar to the video section, but only captions are needed since there's no visual content being showcased, only auditory.</p>
+				<code>
+					&lt;audio <span class="code-highlight">controls</span>&gt;
+					<br>
+          &lt;source src=&quot;audio.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+					<br>
+          &lt;source src=&quot;audio.mp3&quot; type=&quot;audio/mp3&quot;&gt;
+					<br>
+          <span class="code-highlight">&lt;track kind=&quot;captions&quot; src=&quot;captions.vtt&quot; srclang=&quot;en&quot;&gt;</span>
+					<br>
+          &lt;p&gt; Your browser does not support audio content. &lt;/p&gt;
+					<br>
+          &lt;/audio&gt;
+				</code>
+			</section>
+
+			<section id="resources" class="main-section">
+				<header> <h2> Resources </h2> </header>
+				<p class="main-p"></p>
+
+				<h3>General:</h3>
+				<ul class="main-ul">
+					<li class="main-li">
+						<a href="https://a11yproject.com" class="main-link">The A11Y Project website</a>
+					</li>
+					<li class="main-li">
+						<a href="https://dequeuniversity.com/assets/html/jquery-summit/html5/slides/01-introduction.html" class="main-link">HTML5 Accessibility by Duque University</a>
+					</li>
+					<li class="main-li">
+						<a href="https://webaim.org/" class="main-link">Web Accessibility In Mind (WebAIM) website</a>
+					</li>
+				</ul>
+
+				<h3>Color Checkers:</h3>
+				<ul class="main-ul">
+					<li class="main-li">
+						<a  class="main-link" href="https://www.userway.org/contrast-checker">
+							Contrast Checker by UserWay
+						</a>
+					</li>
+					<li class="main-li">
+						<a  class="main-link" href="https://www.toptal.com/designers/colorfilter">
+							Colorblind Web Page Filter by Toptal
+						</a>
+					</li>
+
+					<li class="main-li">
+						<a  class="main-link" href="https://www.color-blindness.com/coblis-color-blindness-simulator/">
+							Color Blindness Simulator by Colblindor
+						</a>
+					</li>
+
+				</ul>
+				<h3>Multimedia:</h3>
+				<ul class="main-ul">
+					<li class="main-li">
+						<a href="https://developer.mozilla.org/en-US/docs/Learn/Accessibility/Multimedia" class="main-link">Accessible Multimedia by Mozilla MDN </a>
+					</li>
+				</ul>
+			</section>
+
+<!-- 			<section id="landmarks" class="main-section">
+				<header> <h2>  </h2> </header>
+				<p class="main-p"></p>
+				<h3></h3>
+				<code>  </code>
+				<p class="main-p"></p>
+				<h3></h3>
+				<ul>
+					<li class="main-li"></li>
+
+				</ul>
+				<p class="main-p"></p>
+			</section> -->
+
+		</main>
+    <footer class="inner">
+			FCC Project: Technical Documentation
+	  </footer>
+
+</body>
+</html>
