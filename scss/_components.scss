@@ -1,0 +1,149 @@
+.card {
+  max-width: 40rem;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem;
+  border-radius: $main-radius * 2;
+  background-color: $light-dark;
+  // background-image: linear-gradient(transparent -30%, $light-dark 50%);
+  position: relative;
+  transform-style: preserve-3d;
+  
+  // using grid, not needed
+  // &:not(:last-of-type) {
+    //   margin-bottom: 3rem;
+    // }
+    
+    &::after {
+      content: '';
+      backface-visibility: hidden;
+      width: 100%;
+      height: 50%;
+      border-radius: $main-radius * 2;
+      background-color: $dark-primary;
+      transform: scale(.9) translateZ(-1px);
+      position: absolute;
+      bottom: -1.2rem;
+      left: 0;
+      transition: transform .8s ease-out;
+  }
+
+  &:hover::after {
+    transform: scale(.95) translateZ(-1px);
+  }
+
+  &:hover &__image img {
+    transform: scale(1.1);
+  }
+
+  &__heading {
+    margin-left: 1em;
+    font-weight: 700;
+    margin-bottom: 1em;
+  }
+
+  &__image {
+    margin-bottom: 1em;
+    border-radius: $main-radius;
+    overflow: hidden;
+    position: relative;
+    
+    img {
+      transition: transform .8s ease-out;
+      display: block;
+      width: 100%;
+    }
+  }
+
+  &__iframe {
+    transition: transform .8s ease-out;
+    display: block;
+    width: 100%;
+    height: 36rem;
+  }
+
+  &__tags {
+    font-size: .8rem;
+    display: flex;
+    position: absolute;
+    right: .5rem;
+    bottom: 0;
+  }
+
+  &__tag {
+    padding: .2rem .6rem .2rem .6rem;
+    background-color: $light-dark;   font-size: .8rem;
+    border-radius: $main-radius $main-radius 0 0;
+
+    &:not(:last-of-type) {
+      margin-right: .5rem;
+    }
+
+    &.--html {
+      border-bottom: .25rem solid $html;
+    }
+
+    &.--css {
+      border-bottom: .25rem solid $css;
+    }
+
+    &.--js {
+      border-bottom: .25rem solid $js;
+    }
+  }
+
+  &__description {
+    margin-left: 1em;
+    margin-bottom: 2em;
+    font-size: .8rem;
+  }
+}
+
+.button {
+  padding: .4rem 1.4rem;
+  border-radius: 10rem;
+  background-color: $secondary;
+  color: $light;
+  font-size: .8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  display: inline-block;
+  box-shadow: 0 .6rem 0 -.4rem $dark-secondary;
+  transition: all .2s ease-out;
+  backface-visibility: hidden;
+
+  &:hover {
+    opacity: .5;
+    transform: scale(1.05);
+  }
+}
+
+.link { 
+  margin-left: 1rem;
+  padding: .2rem 0;
+  border-bottom: .15rem solid $secondary;
+  font-size: .8rem;
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &::after {
+    content: '';
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url(../assets/external.svg);
+    background-size: 100%;
+    position: absolute;
+    top: .2rem;
+    right: -1.8rem;
+  }
+
+  img {
+    position: absolute;
+    width: 1.2rem;
+    top: .2rem;
+    right: -1.8rem;
+  }
+}

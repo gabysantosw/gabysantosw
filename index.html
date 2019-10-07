@@ -1,37 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Mini Portfolio</title>
-	<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Gabriela Santos</title>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Code:300,400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
+  <main class="main">
+    <section class="hero">
+      <h1 class="hero__heading">
+        Hello, I'm <br> Gabriela Santos.
 
-	<nav>
+        <span class="hero__sub-heading">Frontend Developer</span>
+      </h1>
 
-			<h1>
-				Projects
-			</h1>
+      <p class="hero__text">
+        I'm passionate about turning ideas and designs into functional, performant and accessible websites using the power of coding and good UI/UX practices.
+      </p>
 
-		</nav>
+      <a class="hero__link" href="#projects-section">
+        <img src="./assets/arrow.svg" alt="">
+        Projects
+      </a>
+    </section>
+  
+    <section id="projects-section" class="projects">
 
-		<main>
-			<a href="small-projects/simple-todo">Simple Todo - ZTM</a>
-			<a href="my-ZTM/gradient-generator">Gradient Generator - ZTM</a>
-			<a href="personal/weather-app">Weather App</a>
-			<a href="small-projects/timer-todo">TimerTodo</a>
-			<a href="my-freeCodeCamp/landing-page">FCC - Landing Page</a>
-			<a href="my-freeCodeCamp/tech-doc">FCC - Technical Documentation</a>
-			<a href="my-freeCodeCamp/portfolio-webpage">FCC - Personal Portfolio</a>
-			<a href="personal/sant-jordi-1">Sant Jordi</a>
-			<a href="small-projects/flexbox-checkbox">Flexbox Checkbox</a>
-		</main>
+      <div class="card"> <!-- CARD -->
+        <h3 class="card__heading">Simple Calculator</h3>
+        
+        <div class="card__image">
+          <img src="./assets/images/simple-calculator-v0-1.png" alt="">
+          <!-- <iframe class="card__iframe" src="https://gabysantosw.github.io/simple-calculator" frameborder="0"></iframe> -->
+          <div class="card__tags">
+            <div class="card__tag --html"> html </div>
+            <div class="card__tag --css"> css </div>
+            <div class="card__tag --js"> js </div>
+          </div>
+        </div> 
+  
+        <p class="card__description">
+          Calculator designed by me with Figma. UI created using CSS methods like flexbox and grid with the Sass preprocessor (.scss). Core JavaScript for functionality.
+        </p>
+  
+        <a href="https://gabysantosw.github.io/simple-calculator" class="button">live demo</a>
+  
+        <a href="https://github.com/gabysantosw/simple-calculator" class="link">
+          Source code
+        </a>
+      </div> <!-- CARD -->
 
-		<footer id="contact">
-			test
-		</footer>
+    </section>
 
+  </main>
+  
+  <footer class="footer">
+    Made with ❤️ and my 🐶 by Gabriela Santos &copy; 2019
+  </footer>
 </body>
 </html>
