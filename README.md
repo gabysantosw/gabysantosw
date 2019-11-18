@@ -11,7 +11,7 @@ Portfolio to showcase my projects
 
 - [ ] Better copy -> less focus on my name, information more concise about what i do
 
---
+---
 
 - [x] No scaling on button hover, darken the background only (v0.2)
 
