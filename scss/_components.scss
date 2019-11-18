@@ -1,5 +1,6 @@
 .card {
-  max-width: 40rem;
+  width: 32rem;
+  max-width: 100%;
   box-sizing: border-box;
   padding: 1.5rem 1rem;
   border-radius: $main-radius * 2;
@@ -20,7 +21,7 @@
       height: 50%;
       border-radius: $main-radius * 2;
       background-color: $dark-primary;
-      transform: scale(.9) translateZ(-1px);
+      transform: scale(.95) translateZ(-1px);
       position: absolute;
       bottom: -1.2rem;
       left: 0;
@@ -28,7 +29,7 @@
   }
 
   &:hover::after {
-    transform: scale(.95) translateZ(-1px);
+    transform: scale(.95, 1) translateZ(-1px);
   }
 
   &:hover &__image img {
@@ -42,6 +43,7 @@
   }
 
   &__image {
+    min-height: 1.3rem;
     margin-bottom: 1em;
     border-radius: $main-radius;
     overflow: hidden;
@@ -108,12 +110,11 @@
   text-transform: uppercase;
   display: inline-block;
   box-shadow: 0 .6rem 0 -.4rem $dark-secondary;
-  transition: all .2s ease-out;
+  transition: opacity .2s ease-out;
   backface-visibility: hidden;
 
   &:hover {
     opacity: .5;
-    transform: scale(1.05);
   }
 }
 

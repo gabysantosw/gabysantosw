@@ -165,14 +165,22 @@ section {
 }
 
 .projects { 
-  // background: red;
   padding-top: 7rem;
   position: relative;
   top: -10rem;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-  grid-gap: 2rem 1rem;
-  justify-items: center;
+
+  &__heading {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 2rem 1rem;
+    justify-items: center;
+  }
 }
 
 .footer {
