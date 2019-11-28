@@ -53,16 +53,18 @@
   }
 
   &__image {
-    height: 20rem;
+    height: 14rem;
     border-radius: $main-radius;
     overflow: hidden;
     position: relative;
-    object-fit: fill;
     
     img {
-      height: 100%;
-      transition: transform .8s ease-out;
       display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+      transition: transform .8s ease-out;
     }
   }
 
@@ -92,33 +94,6 @@
       margin-right: .5rem;
     }
 
-    &.--html {
-      border-color: $html;
-    }
-
-    &.--css {
-      border-color: $css;
-    }
-
-    &.--js {
-      border-color: $js;
-    }
-  }
-
-  &__tools {
-    margin-bottom: 1rem;
-    padding: 0 1rem;
-    font-size: .8rem;
-    display: flex;
-  }
-
-  &__tool {
-    margin-right: .75rem;
-    padding: .25rem .5rem;
-    background-color: $dark;
-    border-top: .20rem solid transparent;
-    border-radius:  0 0 $main-radius $main-radius;
-
     &.--design {
       border-color: $design;
     }
@@ -134,6 +109,39 @@
     &.--js {
       border-color: $js;
     }
+  }
+
+  &__tools {
+    margin: 0 .5rem 1rem .5rem;
+    font-size: .8rem;
+    background-color: $dark;
+    border-radius:  0 0 $main-radius $main-radius;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__tool {
+    padding: .25rem .75rem;
+    // border-top: .20rem solid transparent;
+    // border-right: .15rem solid $light-dark;
+    // border-left: .15rem solid $light-dark;
+
+    // &.--design {
+    //   border-top-color: $design;
+    // }
+
+    // &.--html {
+    //   border-top-color: $html;
+    // }
+
+    // &.--css {
+    //   border-top-color: $css;
+    // }
+
+    // &.--js {
+    //   border-top-color: $js;
+    // }
   }
 
   &__description {
