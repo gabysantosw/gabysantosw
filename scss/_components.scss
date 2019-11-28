@@ -163,7 +163,7 @@
       display: block;
       position: absolute;
       left: -1rem;
-      top: .3rem;
+      top: calc(50% - .35rem);
 
       width: .5rem;
       height: .5rem;
@@ -174,8 +174,7 @@
 
   &__attribution-link {
     position: relative;
-    top: -.1rem;
-    padding: .1rem .25rem;
+    padding: 0 .25rem;
     border-bottom: .15rem solid $design;
 
     &:hover {
