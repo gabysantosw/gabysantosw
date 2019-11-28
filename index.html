@@ -31,7 +31,11 @@
     <section id="projects-section" class="projects">
 
       <h2 class="projects__heading">
-        Desinged & developed:
+        Development projects:
+      </h2>
+
+      <h2 class="projects__description">
+        Websites and applications built from scratch.
       </h2>
 
       <div class="projects__cards">
@@ -46,10 +50,27 @@
                 <div class="card__tag --css"> css </div>
                 <div class="card__tag --js"> js </div>
               </div>
-            </div> 
-      
+            </div>
+
+            <div class="card__tools">
+              <span class="card__tool --design">
+                Figma
+              </span>
+              <span class="card__tool --css">
+                scss
+              </span>
+              <span class="card__tool --js">
+                API
+              </span>
+            </div>
+
             <p class="card__description">
               Shows a background image from the selected dog breed using the Dog API. Includes a loading spinner while waiting for the response.
+            </p>
+
+            <p class="card__attribution">
+              Designed by: 
+              <a href="https://gabysantosw.github.io/" class="card__attribution-link">Me 👋</a>
             </p>
       
             <a href="https://gabysantosw.github.io/dog-breeds" class="button">live demo</a>
@@ -71,12 +92,28 @@
                 <div class="card__tag --js"> js </div>
               </div>
             </div> 
+
+            <div class="card__tools">
+              <span class="card__tool --design">
+                Figma
+              </span>
+              <span class="card__tool --css">
+                scss
+              </span>
+            </div>
       
             <p class="card__description">
-              Calculator designed with Figma. UI created using CSS methods like flexbox and grid with the Sass preprocessor (.scss). Core JavaScript for functionality.
+              UI created using CSS methods like flexbox and grid with the Sass CSS preprocessor. Core JavaScript for functionality and performant CSS transitions
+            </p>
+
+            <p class="card__attribution">
+              Designed by: 
+              <a href="https://gabysantosw.github.io/" class="card__attribution-link">Me 👋</a>
             </p>
       
-            <a href="https://gabysantosw.github.io/simple-calculator" class="button">live demo</a>
+            <a href="https://gabysantosw.github.io/simple-calculator" class="button">
+              live demo
+            </a>
       
             <a href="https://github.com/gabysantosw/simple-calculator" class="link">
               Source code
@@ -89,12 +126,16 @@
     <section class="projects">
 
         <h2 class="projects__heading">
-          Developed from a given design:
+          UI Challenges:
         </h2>
 
-        <div class="projects__cards --smaller">
+        <p class="projects__description">
+          Small design-to-code challenges where I take an interesting concept and code the layout / interaction / animation.
+        </p>
 
-            <div class="card"> <!-- CARD -->
+        <div class="projects__cards">
+
+            <div class="card --smaller"> <!-- CARD -->
               <h3 class="card__heading">Frontloops Challenge 2.4</h3>
               
               <div class="card__image">
@@ -119,7 +160,9 @@
   </main>
   
   <footer class="footer">
-    Made with ❤️ and my 🐶 by Gabriela Santos &copy; 2019
+    <p class="footer__text">
+      Made with ❤️ and my 🐶 by Gabriela Santos &copy; 2019
+    </p>
   </footer>
 </body>
 </html>
