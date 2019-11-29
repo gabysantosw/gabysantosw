@@ -54,16 +54,14 @@
   }
 
   &__image {
-    height: 14rem;
+    height: 10rem;
     border-radius: $main-radius;
     overflow: hidden;
     position: relative;
     
     img {
-      display: block;
-      // width: 100%;
       height: 100%;
-      // object-fit: cover;
+      width: 100%;
 
       transition: transform .8s ease-out;
     }
