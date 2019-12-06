@@ -26,7 +26,13 @@ $design: hsl(260, 87%, 55%);
 }
 
 @mixin for-tablet {
-  @media screen and (min-width: 500px) {
+  @media screen and (min-width: 32rem) {
+    @content;
+  }
+}
+
+@mixin for-desktop {
+  @media screen and (min-width: 33rem) {
     @content;
   }
 }
