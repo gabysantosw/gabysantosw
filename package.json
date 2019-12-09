@@ -1,0 +1,24 @@
+{
+  "name": "gabysantosw.github.io",
+  "version": "0.3.0",
+  "description": "Portfolio to showcase my projects",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@11ty/eleventy": "^0.9.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gabysantosw/gabysantosw.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gabysantosw/gabysantosw.github.io/issues"
+  },
+  "homepage": "https://github.com/gabysantosw/gabysantosw.github.io#readme"
+}

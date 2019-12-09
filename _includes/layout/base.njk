@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title> {{ title }} </title>
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+<body>
+  <main class="main">
+    <section class="hero">
+      <h1 class="hero__heading">
+        Hello, I'm <br> Gabriela Santos.
+
+        <span class="hero__sub-heading">Frontend Developer</span>
+      </h1>
+
+      <p class="hero__text">
+        I'm passionate about turning ideas and designs into functional, performant and accessible websites using the power of coding and good UI/UX practices.
+      </p>
+
+      <a class="hero__link" href="#projects-section">
+        <img src="./assets/arrow.svg" alt="">
+        Projects
+      </a>
+    </section>
+    
+    <!-- ID used to link with the main button -->
+    <section id="projects-section" class="projects">
+
+      {% include 'layout/projects.njk' %}
+
+    </section>
+
+    <section class="projects">
+
+      {% include 'layout/challenges.njk' %}
+
+    </section>
+
+  </main>
+  
+  <footer class="footer">
+    <p class="footer__text">
+      Powered by <a href="https://www.11ty.dev/">11ty</a>
+    </p>
+    <p class="footer__text">
+      Made with ❤️ and my 🐶 by Gabriela Santos &copy; 2019
+    </p>
+  </footer>
+</body>
+</html>

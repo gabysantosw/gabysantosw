@@ -1,0 +1,35 @@
+<h2 class="projects__heading">
+  UI Challenges:
+</h2>
+
+<p class="projects__description">
+  Small design-to-code challenges where I take an interesting concept and code the layout / interaction / animation.
+</p>
+
+<div class="projects__cards">
+
+  {% for challenge in collections.challenges | reverse %}
+    <div class="card --smaller"> <!-- CARD -->
+      <h3 class="card__heading"> {{ challenge.data.name }} </h3>
+      
+      <div class="card__image">        
+        <ul class="card__tags">
+          {% for tag in challenge.data.used %}
+            <li class="card__tag"> {{ tag }} </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <p class="card__attribution">
+        Designed by: <a href="https://{{ challenge.data.attributionLink }}" class="card__attribution-link">{{ challenge.data.attribution }}</a>
+      </p>
+
+      <a href="https://gabysantosw.github.io{{ challenge.data.live }}" class="button">live demo</a>
+
+      <a href="https://github.com/gabysantosw{{ challenge.data.source }}" class="link">
+        Source code
+      </a>
+    </div> <!-- CARD -->
+  {% endfor %}
+
+</div> <!-- PROJECT__CARDS -->

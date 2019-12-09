@@ -4,6 +4,7 @@ Portfolio to showcase my projects
 
 ## 💚 Versions
 
+- `v0.3` - Now using 11ty!
 - `v0.2` - Added project sections, UI improvements
 - `v0.1` - Basic introduction, cards to showcase projects and footer
 
@@ -24,3 +25,40 @@ Portfolio to showcase my projects
 
 - [x] Add footer `Made with ❤️ and my 🐶 by Gabriela Santos. ©️ 2019` (v0.1)
 - [x] Remove transparency of cards (v0.1)
+
+## Utils
+
+Frontmatter base for the projects: 
+
+```yaml
+---
+tags: projects
+permalink: false
+date:
+name: 
+image: /
+used: []
+tools: []
+description: 
+attribution: 
+attributionLink: 
+live: /
+source: /
+---
+```
+
+Frontmatter base for the challenges: 
+
+```yaml
+---
+tags: projects
+permalink: false
+date:
+name: 
+used: [] 
+attribution: 
+attributionLink: 
+live: /
+source: /
+---
+```

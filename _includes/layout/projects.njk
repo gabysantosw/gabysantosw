@@ -1,0 +1,49 @@
+<h2 class="projects__heading">
+  Development projects:
+</h2>
+
+<h2 class="projects__description">
+  Websites and applications built from scratch.
+</h2>
+
+<div class="projects__cards"> <!-- PROJECT__CARDS -->
+
+  {# GENERATING A CARD FOR EACH PROJECT #}
+  {% for project in collections.projects | reverse %}
+    <div class="card"> <!-- CARD -->
+      <h3 class="card__heading"> {{ project.data.name }} </h3>
+
+      <div class="card__image">
+        <img src="./assets/{{ project.data.image }}" alt="">
+        
+        <ul class="card__tags">
+          {% for tag in project.data.used %}
+            <li class="card__tag"> {{ tag }} </li>
+          {% endfor %}
+        </ul>
+      </div>
+
+      <ul class="card__tools">
+        {% for tool in project.data.tools %}
+            <li class="card__tool"> {{ tool }} </li>
+          {% endfor %}
+      </ul>
+
+      <p class="card__description">
+        {{ project.data.description }}
+      </p>
+
+      <p class="card__attribution">
+        Designed by: <a href="https://{{ project.data.attributionLink }}" class="card__attribution-link">{{ project.data.attribution }}</a>
+      </p>
+
+      <a href="https://gabysantosw.github.io{{ project.data.live }}" class="button">live demo</a>
+
+      <a href="https://github.com/gabysantosw{{ project.data.source }}" class="link">
+        Source code
+      </a>
+    
+    </div> <!-- CARD -->
+  {% endfor %}
+
+</div> <!-- PROJECT__CARDS -->
