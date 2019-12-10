@@ -101,23 +101,32 @@ section {
     margin-top: auto;
     margin-bottom: 1em;
     color: $light;
-    font-size: 1.6em;
+    font-size: 1.75rem;
     font-weight: 700;
+
+    @include for-desktop {
+      font-size: 2.5rem;
+    }
   }
 
   &__sub-heading {
     margin-top: .4em;
     color: $light-neutro;
-    font-weight: 100;
-    font-size: .7em;
+    font-weight: 500;
+    font-size: 1.1rem;
     display: block;
+
+    @include for-desktop {
+      font-size: 2rem;
+    }
   }
 
   &__text {
     margin-bottom: 1em;
+    font-size: 1rem;
 
-    @include for-tablet {
-      font-size: .8em;
+    @include for-desktop {
+      font-size: 1.5rem;
     }
   }
 
@@ -184,7 +193,7 @@ section {
 
   &__description {
     max-width: 32rem;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 3rem auto;
     font-size: 1rem;
     text-align: center;
   }
@@ -192,19 +201,51 @@ section {
   &__cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    grid-gap: 2rem 1rem;
+    grid-gap: 3rem 2rem;
     justify-items: center;
 
     @include for-desktop {
       grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-      grid-gap: 2rem 1rem;
     }
   }
 }
 
 .footer {
   padding: $main-spacing;
-  background-color: $dark-primary;
+  background-color: $light-dark;
   font-size: .8rem;
   text-align: center;
+
+  &__social {
+    width: 2.75rem;
+    margin-bottom: .5rem;
+    border-radius: 50%;
+    background-image: 
+      radial-gradient($light 65%, $dark 65%);
+
+    transition: opacity 250ms ease-in-out;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  &__text {
+    margin-bottom: 1rem;
+
+    &.--main {
+      font-size: .9rem;
+    }
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      border-bottom: .15rem solid $secondary;
+    }
+
+    &:hover {
+      opacity: .8;
+    }
+  }
 }

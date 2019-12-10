@@ -8,7 +8,7 @@
     "@11ty/eleventy": "^0.9.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "npx @11ty/eleventy --serve"
   },
   "repository": {
     "type": "git",
