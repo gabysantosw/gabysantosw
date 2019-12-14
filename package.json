@@ -8,7 +8,8 @@
     "@11ty/eleventy": "^0.9.0"
   },
   "scripts": {
-    "serve": "npx @11ty/eleventy --serve"
+    "serve": "npx @11ty/eleventy --serve",
+    "run": "npx @11ty/eleventy"
   },
   "repository": {
     "type": "git",
