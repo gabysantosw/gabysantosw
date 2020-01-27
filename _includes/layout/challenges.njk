@@ -8,11 +8,13 @@
 
 <div class="projects__cards">
 
-  {% for challenge in collections.challenges | reverse %}
+  {% for challenge in collections.challenges %}
     <div class="card --smaller"> <!-- CARD -->
       <h3 class="card__heading"> {{ challenge.data.name }} </h3>
       
-      <div class="card__image">        
+      <div class="card__figure">
+        <img class="card__image" src="./assets/{{ challenge.data.image }}" alt="">
+        
         <ul class="card__tags">
           {% for tag in challenge.data.used %}
             <li class="card__tag"> {{ tag }} </li>
@@ -24,7 +26,7 @@
         Designed by: <a href="https://{{ challenge.data.attributionLink }}" class="card__attribution-link">{{ challenge.data.attribution }}</a>
       </p>
 
-      <a href="https://gabysantosw.github.io{{ challenge.data.live }}" class="button">live demo</a>
+      <a href="https://gabysantosw.github.io{{ challenge.data.live }}" class="button">LIVE DEMO</a>
 
       <a href="https://github.com/gabysantosw{{ challenge.data.source }}" class="link">
         Source code

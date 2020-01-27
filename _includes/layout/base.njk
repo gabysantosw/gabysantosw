@@ -5,25 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title> {{ title }} </title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="I'm Gabriela Santos, a front-end developer that enjoys turning ideas and designs into functional, performant and accessible websites using the power of coding and best UI/UX practices.">
+  <meta name="author" content="Gabriela S. Santos.">
   <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
+  <div class="wrapper">
+
   <main class="main">
     <section class="hero">
       <h1 class="hero__heading">
         Hello, I'm <br> Gabriela Santos.
 
-        <span class="hero__sub-heading">FRONTEND DEVELOPER</span>
+        <span class="hero__heading--accent">FRONTEND DEVELOPER</span>
       </h1>
 
       <p class="hero__text">
-        I'm passionate about turning ideas and designs into functional, performant and accessible websites using the power of coding and good UI/UX practices.
+        I'm passionate about turning ideas and designs into functional, performant and accessible websites using the power of coding and best UI/UX practices.
       </p>
 
-      <a class="hero__link" href="#projects-section">
-        <img src="./assets/arrow.svg" alt="">
+      <a class="hero__button" href="#projects-section">
+        <img class="hero__button-icon" src="./assets/arrow.svg" alt="">
         Projects
       </a>
     </section>
@@ -41,18 +43,19 @@
 
     </section>
 
+    <footer class="footer">
+      <a href="https://github.com/gabysantosw" class="footer__social-link">
+        <img src="./assets/github.svg" alt="Check out my GitHub." class="footer__social">
+      </a>
+      <p class="footer__text --main">
+        Built with 💙 and my 🐶 by Gabriela Santos &copy; 2019
+      </p>
+      <p class="footer__text">
+        Powered by <a class="footer__link" href="https://www.11ty.dev/">11ty</a>. Hosted on <a href="https://www.netlify.com/" class="footer__link">Netlify</a>.
+      </p>
+    </footer>
   </main>
-  
-  <footer class="footer">
-    <a href="https://github.com/gabysantosw" class="footer__social-link">
-      <img src="./assets/github.svg" alt="Check out my GitHub." class="footer__social">
-    </a>
-    <p class="footer__text --main">
-      Built with 💙 and my 🐶 by Gabriela Santos &copy; 2019
-    </p>
-    <p class="footer__text">
-      Powered by <a class="footer__link" href="https://www.11ty.dev/">11ty</a>. Hosted on <a href="https://www.netlify.com/" class="footer__link">Netlify</a>.
-    </p>
-  </footer>
+
+  </div>
 </body>
 </html>

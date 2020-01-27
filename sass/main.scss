@@ -1,42 +1,79 @@
-// _utils
+////// --- UTILS --- //////
+
+// === VARIABLES ===
+
 // colorbook
+$primary: hsl(180, 100%, 40%);
+$dark-primary: hsl(180, 80%, 20%);
+$secondary: hsl(335, 100%, 50%);
+$dark-secondary: hsl(335, 80%, 15%);
+
 $dark: hsl(180, 0%, 15%);
 $light-dark: hsl(180, 0%, 18%);
 $light: hsl(180, 10%, 98%);
 $light-neutro: hsl(180, 30%, 80%);
-
-$primary: hsl(180, 100%, 40%);
-$dark-primary: hsl(180, 80%, 20%);
-$secondary: hsl(335, 100%, 60%);
-$dark-secondary: hsl(335, 80%, 20%);
-
-$main-spacing: 1rem;
-$main-radius: .5rem;
 
 $html: hsl(18, 87%, 55%);
 $css: hsl(210, 87%, 55%);
 $js: hsl(45, 87%, 55%);
 $design: hsl(260, 87%, 55%);
 
-@mixin width-control {
-  box-sizing: border-box;
-  width: 80rem;
-  max-width: 100%;
-  margin: 0 auto;
-}
+// spacing
+$main-pad: 1rem;
+$main-radius: .5rem;
 
+// sizing
+$content-width: 85.25rem;
+$side: 27rem;
+
+// typography
+$t-heading: 1.5rem;
+$t-subheading: 1.25rem;
+$t-base: 1rem;
+
+// breakpoints
+$tablet: 31rem;
+$desktop: 52.2rem;
+
+// === MIXINS ===
+// media queries
 @mixin for-tablet {
-  @media screen and (min-width: 32rem) {
+  @media screen and (min-width: $tablet) {
     @content;
   }
 }
 
 @mixin for-desktop {
-  @media screen and (min-width: 33rem) {
+  @media screen and (min-width: $desktop) {
     @content;
   }
 }
 
+@mixin over-content {
+  @media screen and (min-width: $content-width) {
+    @content;
+  }
+}
+
+////// --- BASE --- //////
+// === RESET ===
+body, h1, h2, h3, p, ul {
+  margin: 0;
+}
+
+ul, button {
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+// === ANIMATIONS ===
 @keyframes stretch {
 	0% {
     transform: scale3d(1.4, 1, 1);
@@ -85,21 +122,444 @@ $design: hsl(260, 87%, 55%);
   }
 }
 
-// _base 
-// reset
-body, h1, h2, h3, p {
-  margin: 0;
+// === MAIN ===
+.wrapper {
+  color: $light-neutro;
+  font-family: 'Fira Code', monospace;
+  background-color: $dark;
+  line-height: 150%;
+
+  background-image: 
+    url(../assets/test.svg);
+  background-size: 60%;
+  background-attachment: fixed;
+  background-position: -10% 0;
+  background-repeat: repeat;
+
+  &::after {
+    content: '';
+    width: 100%;
+    height: .4rem;
+    background-color: $dark-primary;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include for-desktop {
+      position: fixed;
+    }
+  }
+
+  @include for-desktop {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
-button {
-  border: none;
+.main {
+  padding: $main-pad;
+  
+  position: relative;
+
+  @include for-desktop {
+    padding: $main-pad $main-pad $main-pad $side;
+    box-sizing: border-box;
+    width: $content-width;
+    max-width: 100%;
+  }
 }
 
-a {
-  color: inherit;
+////// --- COMPONENTS --- //////
+.hero {
+  min-height: 90vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  @include for-tablet {
+    min-height: 60vh;
+  }
+
+  @include for-desktop {
+    width: $side;
+    align-items: flex-start;
+    padding: $main-pad * 2;
+    box-sizing: border-box;
+    position: fixed;
+    top: .4rem;
+    left: 0;
+    z-index: 1;
+    text-align: left;
+    background-image: 
+      linear-gradient(to bottom, $dark 90%, transparent 100%);
+  }
+
+  @include over-content {
+    left: calc((100vw - #{$content-width}) / 2);
+  }
+
+  &__heading {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    color: $light;
+    font-size: $t-heading;
+    font-weight: 700;
+    
+    line-height: 130%;
+
+    @include for-tablet {
+      font-size: $t-heading * 1.2;
+    }
+
+    &--accent {
+      display: block;
+      margin-top: .25em;
+      color: $light-neutro;
+      font-size: $t-base;
+      font-weight: 400;
+      letter-spacing: .1em;
+
+      @include for-tablet {
+        font-size: $t-base * 1.2;
+      }
+    }
+  }
+
+  &__text {
+    width: 42ch;
+    max-width: 90%;
+    margin-bottom: 4em;
+    font-size: $t-base;
+  }
+
+  &__button {
+    padding: 1em 2em 1em 3em;
+    border-radius: $main-radius;
+    background-color: $primary;
+    color: $dark;
+    font-size: $t-base;
+    font-weight: 700;
+    letter-spacing: .1em;
+    text-decoration: none;
+
+    position: relative;
+    transition: transform 250ms ease-in-out;
+    transform-style: preserve-3d;
+
+    @include for-desktop {
+      align-self: flex-end;
+      margin-right: $main-pad * 2;
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      top: .6rem;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: $main-radius;
+      background-color: $dark-primary;
+      transform: scale(.85) translateZ(-1px);
+
+      transition: transform 250ms ease-in-out;
+    }
+
+    &:hover {
+      transform: translateY(.5rem);
+
+      &::after {
+        transform: scale(.85) translateY(-.5rem) translateZ(-1px);
+      }
+    }
+  }
+
+  &__button-icon {
+    height: 1.5rem;
+    position: absolute;
+    top: .8rem;
+    left: 1.2rem;
+    animation: stretch 1.5s ease-in-out infinite;
+
+    @include for-desktop {
+      top: 1rem;
+      animation: none;
+      transform: rotateZ(-90deg);
+    }
+  }
+}
+
+.projects { 
+  padding-top: $main-pad * 3;
+  padding-bottom: $main-pad * 4;
+
+  &__heading {
+    margin-bottom: 1em;
+    font-size: 1.4rem;
+    text-align: center;
+
+    @include for-desktop {
+      font-size: 1.4rem * 1.4;
+    }
+  }
+
+  &__description {
+    max-width: 32rem;
+    margin: 0 auto 3rem auto;
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+    grid-gap: 3rem 2rem;
+    justify-items: center;
+  }
+}
+
+.footer {
+  position: absolute;
+  left: 0;
+
+  width: 100%;
+  box-sizing: border-box;
+  padding: $main-pad;
+  background-color: $light-dark;
+  font-size: .8rem;
+  text-align: center;
+
+  @include for-desktop {
+    width: $side - 2rem;
+    border-radius: $main-radius $main-radius 0 0;
+
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  @include over-content {
+    left: calc((100vw - #{$content-width}) / 2);
+  }
+
+  &__social {
+    width: 2.75rem;
+    margin-bottom: .5rem;
+    border-radius: 50%;
+    background-image: 
+      radial-gradient($light 65%, $dark 65%);
+
+    transition: opacity 250ms ease-in-out;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+
+  &__text {
+    margin: 1rem 0;
+
+    &.--main {
+      width: 16rem;
+      margin: 0 auto;
+      font-size: .9rem;
+    }
+  }
+
+  &__link {
+    border-bottom: .15rem solid $secondary;
+    color: $light;
+    text-decoration: none;
+
+    &:hover {
+      opacity: .8;
+    }
+  }
+}
+
+.card {
+  width: 32rem;
+  max-width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem 1rem;
+  border-radius: $main-radius * 2;
+  background-color: $light-dark;
+  position: relative;
+  transform-style: preserve-3d;
+  
+  // decoration under card
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: -.5rem;
+    left: 0;
+
+    width: 100%;
+    height: 50%;
+    border-radius: $main-radius * 2;
+    background-color: $dark-primary;
+
+    transform: scaleX(.90) translateZ(-1px);
+    transition: transform .8s ease-out;
+  }
+
+  &__heading {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    font-weight: 700;
+    letter-spacing: .1em;
+  }
+
+  &__figure {
+    min-height: 1rem;
+    border-radius: $main-radius;
+    background-color: $dark-primary;
+    overflow: hidden;
+    position: relative;
+    object-fit: cover;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__tags {
+    font-size: .8rem;
+    display: flex;
+    position: absolute;
+    right: .5rem;
+    bottom: 0;
+  }
+
+  &__tag {
+    padding: .2rem .6rem .2rem .6rem;
+    background-color: $dark-primary;   
+    font-size: .8rem;
+    border-bottom: .25rem solid transparent;
+
+    &:first-child {
+      border-radius: .5rem 0 0 0;
+    }
+
+    &:last-child {
+      border-radius: 0 .5rem 0 0;
+    }
+  }
+
+  &__tools {
+    margin: 0 .5rem 1rem .5rem;
+    font-size: .8rem;
+    background-color: $dark;
+    border-radius:  0 0 $main-radius $main-radius;
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  &__tool {
+    padding: .25rem .75rem;
+  }
+
+  &__description {
+    margin-left: 1em;
+    font-size: .8rem;
+  }
+
+  &__attribution {
+    margin: 1.25rem 0 1.25rem 1.6rem;
+    padding-bottom: .25rem;
+    font-size: .8rem;
+    position: relative;
+
+    // decorative bullet
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: .45rem;
+      left: -1rem;
+
+      width: .5rem;
+      height: .5rem;
+      border-radius: 50%;
+      background-color: $design;
+    }
+  }
+
+  &__attribution-link {
+    padding: 0 .25rem;
+    border-bottom: .15rem solid $design;
+    color: $light;
+    text-decoration: none;
+
+    &:hover {
+      opacity: .5;
+    }
+  }
+}
+
+.button {
+  padding: .4rem 1.4rem;
+  border-radius: 10rem;
+  background-color: $secondary;
+  color: $light;
+  font-size: .8rem;
+  font-weight: 700;
   text-decoration: none;
+  letter-spacing: .1em;
+
+  display: inline-block;
+  box-shadow: 0 .4rem 0 -.2rem $dark-secondary;
+  transition: opacity .2s ease-out;
+
+  &:hover {
+    opacity: .5;
+  }
 }
 
+.link { 
+  margin-left: 1rem;
+  padding: .05rem 0;
+  border-bottom: .2rem solid $secondary;
+  color: $light;
+  font-size: .8rem;
+  text-decoration: none;
 
-@import 'components';
-@import 'sections';
+  display: inline-block;
+  position: relative;
+
+  &:hover {
+    opacity: .5;
+  }
+
+  &::after {
+    content: '';
+    width: 1.2rem;
+    height: 1.2rem;
+    background-image: url(../assets/external.svg);
+    background-size: 100%;
+    position: absolute;
+    top: .2rem;
+    right: -1.8rem;
+  }
+
+  img {
+    position: absolute;
+    width: 1.2rem;
+    top: .2rem;
+    right: -1.8rem;
+  }
+}
+
+////// --- LAYOUT --- //////
+
+
+////// --- PAGES --- //////
+
+////// --- THEMES --- //////

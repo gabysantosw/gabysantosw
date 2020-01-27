@@ -3,7 +3,7 @@ tags: projects
 permalink: false
 date: 2010-01-01
 name: Huddle Landing Page
-image: /gifs/huddle-landing-page.gif
+image: /images/huddle-landing-page.jpg
 used: [HTML, CSS]
 tools: [CSS custom properties]
 description: Simple landing page where I explored using CSS's custom properties & flexbox. 

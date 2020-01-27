@@ -13,8 +13,8 @@
     <div class="card"> <!-- CARD -->
       <h3 class="card__heading"> {{ project.data.name }} </h3>
 
-      <div class="card__image">
-        <img src="./assets/{{ project.data.image }}" alt="">
+      <div class="card__figure">
+        <img class="card__image" src="./assets/{{ project.data.image }}" alt="">
         
         <ul class="card__tags">
           {% for tag in project.data.used %}
@@ -37,7 +37,7 @@
         Designed by: <a href="https://{{ project.data.attributionLink }}" class="card__attribution-link">{{ project.data.attribution }}</a>
       </p>
 
-      <a href="https://gabysantosw.github.io{{ project.data.live }}" class="button">live demo</a>
+      <a href="https://gabysantosw.github.io{{ project.data.live }}" class="button">LIVE DEMO</a>
 
       <a href="https://github.com/gabysantosw{{ project.data.source }}" class="link">
         Source code
