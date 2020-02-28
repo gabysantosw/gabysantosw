@@ -136,6 +136,10 @@ button {
   background-position: -10% 0;
   background-repeat: repeat;
 
+  @include for-desktop {
+    background-size: 20%;
+  }
+
   &::after {
     content: '';
     width: 100%;
@@ -186,7 +190,7 @@ button {
   }
 
   @include for-desktop {
-    width: $side;
+    width: $side - 2rem;
     align-items: flex-start;
     padding: $main-pad * 2;
     box-sizing: border-box;
@@ -422,19 +426,22 @@ button {
     background-color: $dark-primary;
     overflow: hidden;
     position: relative;
-    object-fit: cover;
   }
-
+  
   &__image {
-    width: 100%;
+    width: 110%;
+    object-fit: cover;
+    object-position: center;
+    position: relative;
+    margin: -.25rem -.25rem 0 -.25rem;
   }
 
   &__tags {
     font-size: .8rem;
-    display: flex;
     position: absolute;
     right: .5rem;
     bottom: 0;
+    display: flex;
   }
 
   &__tag {
