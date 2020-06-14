@@ -3,11 +3,14 @@
   "version": "0.3.0",
   "description": "Portfolio to showcase my projects",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "sass": "^1.26.8"
+  },
   "devDependencies": {
     "@11ty/eleventy": "^0.9.0"
   },
   "scripts": {
+    "sass": "sass --style=compressed sass/main.scss css/main.min.css --watch",
     "serve": "npx @11ty/eleventy --serve",
     "run": "npx @11ty/eleventy"
   },

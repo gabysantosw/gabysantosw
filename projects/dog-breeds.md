@@ -9,6 +9,6 @@ tools: [Figma, Sass, APIs]
 description: Shows a background image from the selected dog breed using the Dog API. Includes a loading spinner while waiting for the response. 
 attribution: Me 👋
 attributionLink: 'gabysantosw.github.io'
-live: /dog-breeds
+live: gabysantosw.github.io/dog-breeds
 source: /dog-breeds
 ---

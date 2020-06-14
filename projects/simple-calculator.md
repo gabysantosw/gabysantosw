@@ -9,6 +9,6 @@ tools: [Figma, Sass]
 description: UI created using CSS methods like flexbox and grid with the Sass CSS preprocessor. Core JavaScript for functionality and performant CSS transitions.
 attribution: Me 👋
 attributionLink: 'gabysantosw.github.io'
-live: /simple-calculator
+live: gabysantosw.github.io/simple-calculator
 source: /simple-calculator
 ---
