@@ -199,8 +199,7 @@ button {
     left: 0;
     z-index: 1;
     text-align: left;
-    background-image: 
-      linear-gradient(to bottom, $dark 90%, transparent 100%);
+    background-color: $dark;
   }
 
   @include over-content {
@@ -429,7 +428,7 @@ button {
   }
   
   &__image {
-    width: 110%;
+    width: 105%;
     object-fit: cover;
     object-position: center;
     position: relative;
