@@ -7,7 +7,7 @@
     "sass": "^1.26.8"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^0.9.0"
+    "@11ty/eleventy": "^1.0.2"
   },
   "scripts": {
     "sass": "sass --style=compressed sass/main.scss css/main.min.css --watch",
